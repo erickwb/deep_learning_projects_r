@@ -1,9 +1,7 @@
 '''
 Name: Erick Correia Silva
-
-exemplo de multilayer perceptron com o dataset iris
+Example of multilayer perceptron with iris dataset
 '''
-
 
 #carregando bibliotecas 
 library(neuralnet) #blioteca para o multilayer perceptron
