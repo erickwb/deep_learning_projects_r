@@ -1,6 +1,6 @@
 '''
 Name: Erick Correia Silva
-classificação dos dados MNIST
+classification of MNIST data
 '''
 
 library(h2o)
@@ -48,24 +48,10 @@ treino[,785] <- as.factor(treino[,785])
 teste[,785] <- as.factor(teste[,785])
 
 #Modelo
-#modelo ja faz uma cross validion
+#obs: o modelo ja faz uma cross validation
 modelo <- h2o.deeplearning(x = colnames(treino[,1:784]),  y = "C785",  training_frame = treino,  validation_frame = teste,  distribution = "AUTO",  activation = "RectifierWithDropout",  hidden = c(64,64,64),  sparse = TRUE, epochs = 20)
 plot(modelo)
 
 #Performance do modelo
 h2o.performance(modelo)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
